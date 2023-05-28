@@ -7,7 +7,6 @@ class Avion {
     private int eficiencia;
     private int fortaleza;
     private String destino;
-    //agregar ruta(puede ser en una lista)
 
     public Avion(String tipo, int velocidad, int eficiencia, int fortaleza) {
         this.tipo = tipo;
@@ -15,9 +14,44 @@ class Avion {
         this.eficiencia = eficiencia;
         this.fortaleza = fortaleza;
         this.destino = null;
-
     }
 
-    // Otros métodos y getters/setters
+    // Getter y Setter para velocidad
+    public int getVelocidad() {
+        return velocidad;
+    }
+
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    // Getter y Setter para eficiencia
+    public int getEficiencia() {
+        return eficiencia;
+    }
+
+    public void setEficiencia(int eficiencia) {
+        this.eficiencia = eficiencia;
+    }
+
+    // Getter y Setter para fortaleza
+    public int getFortaleza() {
+        return fortaleza;
+    }
+
+    public void setFortaleza(int fortaleza) {
+        this.fortaleza = fortaleza;
+    }
+
+    // Getter y Setter para destino
+    public String getDestino() {
+        return destino;
+    }
+
+    public void setDestino(String destino) {
+        this.destino = destino;
+    }
+
+    // Otros métodos
 
 }
