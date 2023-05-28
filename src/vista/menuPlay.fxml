@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="307.0" prefWidth="277.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuPlayController">
+   <children>
+      <Button fx:id="play" layoutX="63.0" layoutY="110.0" mnemonicParsing="false" onAction="#playBtn" prefHeight="25.0" prefWidth="151.0" text="Play">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="exit" layoutX="63.0" layoutY="206.0" mnemonicParsing="false" onAction="#exitBtn" prefHeight="44.0" prefWidth="151.0" text="Exit">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="63.0" layoutY="14.0" text="AirWar">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
