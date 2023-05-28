@@ -2,7 +2,6 @@ package modelo;
 
 /**
  * Clase que genera los distintos aviones
- * 
  * @author Vidal Flores
  * @author Dylan Meza
  * @author Brayner Moncada
