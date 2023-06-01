@@ -3,18 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/tecno/Desktop/Proyecto_Datos1/Proyecto3/AirWar/src/controller/main.java</file>
-            <file>file:/C:/Users/tecno/Desktop/Proyecto_Datos1/Proyecto3/AirWar/src/controller/MenuPrincipalJuegoController.java</file>
-            <file>file:/C:/Users/tecno/Desktop/Proyecto_Datos1/Proyecto3/AirWar/src/vista/JuegoPrincipal.fxml</file>
-            <file>file:/C:/Users/tecno/Desktop/Proyecto_Datos1/Proyecto3/AirWar/src/controller/ControladorAereoController.java</file>
-            <file>file:/C:/Users/tecno/Desktop/Proyecto_Datos1/Proyecto3/AirWar/src/modelo/grafo.java</file>
-            <file>file:/C:/Users/tecno/Desktop/Proyecto_Datos1/Proyecto3/AirWar/src/modelo/aristaGrafo.java</file>
-            <file>file:/C:/Users/tecno/Desktop/Proyecto_Datos1/Proyecto3/AirWar/src/vista/menuPrincipalJuego.fxml</file>
-            <file>file:/C:/Users/tecno/Desktop/Proyecto_Datos1/Proyecto3/AirWar/src/controller/JuegoPrincipalController.java</file>
-            <file>file:/C:/Users/tecno/Desktop/Proyecto_Datos1/Proyecto3/AirWar/src/modelo/nodoGrafo.java</file>
-            <file>file:/C:/Users/tecno/Desktop/Proyecto_Datos1/Proyecto3/AirWar/src/vista/ControladorAereo.fxml</file>
-            <file>file:/C:/Users/tecno/Desktop/Proyecto_Datos1/Proyecto3/AirWar/src/vista/menuPrincipalControladorAereo.fxml</file>
-            <file>file:/C:/Users/tecno/Desktop/Proyecto_Datos1/Proyecto3/AirWar/src/controller/MenuPrincipalControladorAereoController.java</file>
+            <file>file:/C:/Users/brayn/OneDrive/Desktop/AirWarP3/src/modelo/grafo.java</file>
+            <file>file:/C:/Users/brayn/OneDrive/Desktop/AirWarP3/src/modelo/AirWarGameLogic.java</file>
+            <file>file:/C:/Users/brayn/OneDrive/Desktop/AirWarP3/src/modelo/aristaGrafo.java</file>
+            <file>file:/C:/Users/brayn/OneDrive/Desktop/AirWarP3/src/modelo/nodoGrafo.java</file>
+            <file>file:/C:/Users/brayn/OneDrive/Desktop/AirWarP3/src/modelo/Aeropuertos.java</file>
         </group>
     </open-files>
 </project-private>

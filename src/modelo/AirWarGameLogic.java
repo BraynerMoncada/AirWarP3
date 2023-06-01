@@ -7,12 +7,12 @@ package modelo;
  * 
  */
 public class AirWarGameLogic {
+    
 
-
-    public AirWarGameLogic() {
+    public AirWarGameLogic() {   
     }
 
-    public void generarAeropuertos(int cantidad) {
+    public void generarAeropuertos(int cantidad) {     
         //Logica generar aeropuertos
     }
 
