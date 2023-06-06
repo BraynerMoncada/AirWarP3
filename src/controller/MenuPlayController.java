@@ -39,21 +39,21 @@ public class MenuPlayController implements Initializable {
     private void playBtn(ActionEvent event) throws IOException {
         javafx.geometry.Rectangle2D pantalla = Screen.getPrimary().getVisualBounds();
         
-        Parent rootMenuJuego = FXMLLoader.load(getClass().getResource("/vista/menuPrincipalJuego.fxml"));
+        Parent rootMenuJuego = FXMLLoader.load(getClass().getResource("/vista/JuegoPrincipal.fxml"));
         Scene sceneMenuJuego = new Scene(rootMenuJuego);
         Stage stageMenuJuego = new Stage();
-        stageMenuJuego.setTitle("Menú principal");
+        stageMenuJuego.setTitle(" Air War ");
         stageMenuJuego.setScene(sceneMenuJuego);
-        stageMenuJuego.setX(pantalla.getMinX() + 100); // Colocar la ventana a 100 píxeles de la izquierda
-        stageMenuJuego.setY(pantalla.getMinY() + 100); // Colocar la ventana a 100 píxeles desde la parte superior
+        stageMenuJuego.setX(pantalla.getMinX() + 10); // Colocar la ventana a 100 píxeles de la izquierda
+        stageMenuJuego.setY(pantalla.getMinY() + 20); // Colocar la ventana a 100 píxeles desde la parte superior
 
-        Parent rootControlador = FXMLLoader.load(getClass().getResource("/vista/menuPrincipalControladorAereo.fxml"));
+        Parent rootControlador = FXMLLoader.load(getClass().getResource("/vista/ControladorAereo.fxml"));
         Scene sceneControlador = new Scene(rootControlador);
         Stage stageControlador = new Stage();
-        stageControlador.setTitle("Menú principal Controlador Aereo");
+        stageControlador.setTitle(" Controlador Aereo ");
         stageControlador.setScene(sceneControlador);
-        stageControlador.setX(stageMenuJuego.getX() + 620); // Colocar la ventana a la derecha del maestro con un espacio de 20 píxeles
-        stageControlador.setY(pantalla.getMinY() + 100); // Colocar la ventana a la misma altura que el maestro
+        stageControlador.setX(stageMenuJuego.getX() + 750); // Colocar la ventana a la derecha del maestro con un espacio de 20 píxeles
+        stageControlador.setY(pantalla.getMinY() + 250); // Colocar la ventana a la misma altura que el maestro
         
         stageMenuJuego.show();
         stageControlador.show();
