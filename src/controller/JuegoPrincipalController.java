@@ -53,22 +53,65 @@ public class JuegoPrincipalController implements Initializable {
         System.out.println(numAerosyPorta + "aeros");
         System.out.println(contador + "conta");
         while (contador < numAerosyPorta) {
-            int posX = random.nextInt(11); 
-            generarBotones(posX, contador);
+            System.out.println(contador+"esto es contador");
+            int posX = random.nextInt(12); 
+            
+            if(posX==0&&contador==1){
+                generarBotonesAeropuerto(posX, contador);
+            }
+            else if(posX==1&&(contador>1&&contador<5)){
+                generarBotonesAeropuerto(posX, contador);
+            }
+            else if(posX==2&&(contador<4&&contador>4&&contador<10)){
+                generarBotonesAeropuerto(posX, contador);
+            }
+            else if(posX==3&&(contador<3&&contador>5&&contador<9)){
+                generarBotonesAeropuerto(posX, contador);
+            }
+            else if(posX==4&&contador<2){
+                generarBotonesAeropuerto(posX, contador);
+            }
+            else if(posX==5&&(contador>1&&contador<7)){
+                generarBotonesAeropuerto(posX, contador);
+            }
+            else if(posX==6&&(contador>0&&contador<10)){
+                generarBotonesAeropuerto(posX, contador);
+            }
+            else if(posX==7&&(contador>0&&contador<7)){
+                generarBotonesAeropuerto(posX, contador);
+            }
+            else if(posX==8&&contador<6){
+                generarBotonesAeropuerto(posX, contador);
+            }
+            else if(posX==9&&contador<7){
+                generarBotonesAeropuerto(posX, contador);
+            }
+            else if(posX==10&&(contador<4&&contador>6&&contador<10)){
+                generarBotonesAeropuerto(posX, contador);
+            }
+            else{
+                generarBotonesPortaaviones(posX, contador);
+            }
             contador++;
-            System.out.println(posX+"posx");
+            System.out.println(posX);
         }
     }
 
-    public void generarBotones(int x, int y) {
-        Button mapButton = createButton("Pista"); // Cambiar el texto según corresponda
+    public void generarBotonesAeropuerto(int x, int y) {
+        Button mapButton = createButton("Aeropuerto"); // Cambiar el texto según corresponda
+        mapaJuego.add(mapButton, x, y);
+
+    }
+
+    public void generarBotonesPortaaviones(int x, int y) {
+        Button mapButton = createButton("PortaAviones"); // Cambiar el texto según corresponda
         mapaJuego.add(mapButton, x, y);
 
     }
 
     private Button createButton(String text) {
         Button button = new Button(text);
-        button.setPrefSize(42, 10);
+        button.setPrefSize(70, 10);
         // Agregar funcionalidad de aeropuerto o portaaviones
         return button;
     }
