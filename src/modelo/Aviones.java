@@ -29,17 +29,17 @@ public class Aviones {
         this.fortaleza = fortaleza;
         this.consumo = consumo;
     }
-    
+
     /**
      * metodo para imprimir los aviones con sus respectivos atributos
      * @return un string que contiene los atributos del avion
      */
     @Override
     public String toString() {
-        return "Aviones{" + "nombre=" + nombre + 
-               "velocidad=" + velocidad + 
-               "fortaleza=" + fortaleza +
-               "consumo=" + consumo + '}';
+        return "Avion: " + nombre + "\n" +
+               "velocidad: " + velocidad + "\n" + 
+               "fortaleza: " + fortaleza + "\n" +
+               "consumo: " + consumo + '}';
     }
 
 }
