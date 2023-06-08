@@ -54,6 +54,16 @@ public class MenuPlayController implements Initializable {
         stageControlador.setScene(sceneControlador);
         stageControlador.setX(stageMenuJuego.getX() + 750); // Colocar la ventana a la derecha del maestro con un espacio de 20 píxeles
         stageControlador.setY(pantalla.getMinY() + 250); // Colocar la ventana a la misma altura que el maestro
+
+        //Pegar en setOnAction de los botones aeropuertos
+        Parent rootBuscador = FXMLLoader.load(getClass().getResource("/vista/avionesBuscador.fxml"));
+        Scene sceneBuscador = new Scene(rootBuscador);
+        Stage stageBuscador = new Stage();
+        stageBuscador.setTitle(" Controlador Aereo ");
+        stageBuscador.setScene(sceneBuscador);
+        stageBuscador.setX(stageMenuJuego.getX() + 750); // Colocar la ventana a la derecha del maestro con un espacio de 20 píxeles
+        stageBuscador.setY(pantalla.getMinY() + 250); // Colocar la ventana a la misma altura que el maestro
+        stageBuscador.show();
         
         stageMenuJuego.show();
         stageControlador.show();
