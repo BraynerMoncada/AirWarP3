@@ -10,6 +10,7 @@ public class grafo {
     private int numNodos;
     private nodoGrafo[] nodos;
     private int[][] matrizAdyacencia;
+    public int length;
 
     /**
      * Constructor de la clase Grafo.
