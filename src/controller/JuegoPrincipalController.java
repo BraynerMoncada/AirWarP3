@@ -2,11 +2,17 @@ package controller;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,6 +22,7 @@ import modelo.nodoGrafo;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 
 /**
@@ -76,20 +83,64 @@ public class JuegoPrincipalController implements Initializable {
         generarPistasAleatorias();
     }
 
+    /**
+     * Metodo para generar Aeropuertos
+     * 
+     * @param x locacion aleatoria en la posicion x
+     * @param y locacuion aleatoria en la posicion y
+     */
     public void generarBotonesAeropuerto(int x, int y) {
         Button mapButton = createButton("Aeropuerto"); // Cambiar el texto según corresponda
+        mapButton.setOnAction(event -> {   
+            try {
+                //Pegar en setOnAction de los botones aeropuertos
+                Parent rootBuscador = FXMLLoader.load(getClass().getResource("/vista/avionesBuscador.fxml"));
+                Scene sceneBuscador = new Scene(rootBuscador);
+                Stage stageBuscador = new Stage();
+                stageBuscador.setTitle("Buscar Aviones en Aeropuertos");
+                stageBuscador.setScene(sceneBuscador);
+                stageBuscador.show();
+            } catch (IOException ex) {
+                Logger.getLogger(JuegoPrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
         mapaJuego.add(mapButton, x, y);
         nodoGrafo aeropuerto = new nodoGrafo("Aeropuerto", x, y);
         AeropuertosPortaaviones.agregarNodo(aeropuerto);
     }
 
+    /**
+     * Metodo para generar Portaaviones
+     * 
+     * @param x locacion aleatoria en la posicion x
+     * @param y locacuion aleatoria en la posicion y
+     */
     public void generarBotonesPortaaviones(int x, int y) {
         Button mapButton = createButton("Portaaviones"); // Cambiar el texto según corresponda
+        mapButton.setOnAction(event -> {   
+            try {
+                //Pegar en setOnAction de los botones aeropuertos
+                Parent rootBuscador = FXMLLoader.load(getClass().getResource("/vista/avionesBuscador.fxml"));
+                Scene sceneBuscador = new Scene(rootBuscador);
+                Stage stageBuscador = new Stage();
+                stageBuscador.setTitle("Buscar Aviones en Portaaviones ");
+                stageBuscador.setScene(sceneBuscador);
+                stageBuscador.show();
+            } catch (IOException ex) {
+                Logger.getLogger(JuegoPrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
         mapaJuego.add(mapButton, x, y);
         nodoGrafo portaaviones = new nodoGrafo("Portaaviones", x, y);
         AeropuertosPortaaviones.agregarNodo(portaaviones);
     }
 
+    /**
+     * Metodo que crea los botones
+     * 
+     * @param text texto que ira en los botones(Aeropuerto o Portaaviones)
+     * @return un boton
+     */
     private Button createButton(String text) {
         Button button = new Button(text);
         button.setPrefSize(70, 10);
@@ -97,6 +148,9 @@ public class JuegoPrincipalController implements Initializable {
         return button;
     }
 
+    /**
+     * Metodo que calcula las rutas entre los aeropuertos y los portaaviones
+     */
     private void generarPistasAleatorias() {
         int numPistas = numAerosyPorta - 1;
         Canvas canvas = new Canvas(mapaJuego.getWidth(), mapaJuego.getHeight());
@@ -123,6 +177,13 @@ public class JuegoPrincipalController implements Initializable {
         }
     }
 
+    /**
+     * Metodo que calcula la distancia entre dos nodos
+     * 
+     * @param origen Aeropuerto o portaaviones de origen
+     * @param destino Aeropuerto o portaaviones al que quiere llegar
+     * @return distancia entre los nodos
+     */
     private double calcularDistancia(nodoGrafo origen, nodoGrafo destino) {
         int x1 = origen.getCoordenadaX();
         int y1 = origen.getCoordenadaY();
@@ -132,6 +193,12 @@ public class JuegoPrincipalController implements Initializable {
         return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
     }
 
+    /**
+     * Metodo que calcula el costo de los aviones al aterrizar en un aeropuerto o portaaviones
+     * 
+     * @param destino Aeropuerto o portaaviones al que se quiere llegar
+     * @return costo de aterrizaje
+     */
     private double calcularCostoAterrizaje(nodoGrafo destino) {
         if (destino.getNombre().equals("Portaaviones")) {
             // Si el destino es un portaaviones, se considera un costo de aterrizaje más alto
