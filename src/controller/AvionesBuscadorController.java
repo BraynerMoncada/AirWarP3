@@ -304,6 +304,7 @@ public class AvionesBuscadorController implements Initializable {
     /**
      * Metodo que desactiva los botones que no coinciden con la busqueda
      * @param buscador Texto introducido en el TextField
+     * @param algoritmo String del nombre del algoritmo que usara
      */
     private void desactivarBotones(String buscador, String algoritmo) {
         if(algoritmo == "shell"){
@@ -350,6 +351,10 @@ public class AvionesBuscadorController implements Initializable {
         }
     }
 
+    /**
+     * Accion del boton de busqueda
+     * @param event al hacer click
+     */
     @FXML
     private void busqueda(ActionEvent event) {
         busquedaBtn.setDisable(true);
@@ -361,6 +366,10 @@ public class AvionesBuscadorController implements Initializable {
         });
     }
 
+    /**
+     * Accion del boton de shell
+     * @param event al hacer click
+     */
     @FXML
     private void shellSort(ActionEvent event) {
         busquedaBtn.setDisable(false);
@@ -372,6 +381,10 @@ public class AvionesBuscadorController implements Initializable {
         });
     }
 
+    /**
+     * Accion del boton de insertion
+     * @param event al hacer click
+     */
     @FXML
     private void insertionSort(ActionEvent event) {
         busquedaBtn.setDisable(false);
