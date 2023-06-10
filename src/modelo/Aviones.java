@@ -18,6 +18,7 @@ public class Aviones {
 
     /**
      * Constructor de la clase Aviones
+     * 
      * @param nombre nombre que tendra el avion
      * @param velocidad la velocidad que tendra el avion
      * @param fortaleza la fortaleza del avion, representada con barras
@@ -30,20 +31,33 @@ public class Aviones {
         this.eficiencia = eficiencia;
     }
 
+    /**
+     * Metodo para obtener el nombre del avion
+     * @return nombre del avion
+     */
     public String getNombre() {
         return nombre;
     }
 
+    /**
+     * Metodo para obtener la eficiencia del avion
+     * @return eficiencia del avion
+     */
     public String getEficiencia(){
         return eficiencia;
     }
     
+    /**
+     * Metodo para obtener la velocidad del avion
+     * @return velocidad del avion
+     */
     public int getVelocidad(){
         return velocidad;
     }
     
     /**
      * metodo para imprimir los aviones con sus respectivos atributos
+     * 
      * @return un string que contiene los atributos del avion
      */
     @Override

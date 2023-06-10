@@ -35,6 +35,11 @@ public class MenuPlayController implements Initializable {
         // TODO
     }    
     
+    /**
+     * Accion del boton play
+     * @param event al hacer click
+     * @throws IOException 
+     */
     @FXML
     private void playBtn(ActionEvent event) throws IOException {
         javafx.geometry.Rectangle2D pantalla = Screen.getPrimary().getVisualBounds();
@@ -63,6 +68,10 @@ public class MenuPlayController implements Initializable {
         ventana.close();
     }
 
+    /**
+     * Accion del boton exit
+     * @param event al hacer click
+     */
     @FXML
     private void exitBtn(ActionEvent event) {
         Button botonPresionado = (Button) event.getSource();

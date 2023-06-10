@@ -26,7 +26,7 @@ import javafx.stage.Stage;
 
 
 /**
- * FXML Controller class
+ * Ventana del principal que visualiza el juego
  *
  * @author Vidal Flores
  * @author Dylan Meza

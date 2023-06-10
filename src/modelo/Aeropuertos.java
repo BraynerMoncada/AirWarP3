@@ -8,6 +8,7 @@ package modelo;
 class Aeropuertos {
     private String nombre;
     private int capacidadCombustible;
+    
     /**
      * Contructor de la clase Aeropuertos
      * @param nombre nombre del aeripuerto
